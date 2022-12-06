@@ -1,0 +1,18 @@
+{
+    "name": "carlos/poo",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Carlos Alognon",
+            "email": "carlosalognon08@gmail.com"
+        }
+    ],
+    "require": {
+        "fakerphp/faker": "^1.20"
+    }
+}
