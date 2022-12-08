@@ -1,10 +1,10 @@
  <?php
 require_once '../vendor/autoload.php';
 
+use App\Services\App;
 use App\Services\Router;
 
 define("BASE_VIEW", dirname(__DIR__) . DIRECTORY_SEPARATOR . 'ressources' . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR);
-
 
 $router = new Router();
 
@@ -16,4 +16,4 @@ $router->register("/home", function(){
 });
 
 
-echo $router->resolve($_SERVER['REQUEST_URI']);
+(new App($router))->run();
